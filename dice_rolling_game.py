@@ -1,10 +1,13 @@
+import random
 # Loop
-choice = input('Roll the dice? (y/n):')# Ask: roll the device?
-if choice == 'y'# If user enters y
-#   Generate two random umbers
-#   Print them
-# If user enters n
-#   Print thank you message 
-#   Terminate 
-# Else
-#   Print invalid choice
+while True:
+    choice = input('Roll the dice? (y/n):') # Ask: roll the device?
+    if choice == 'y': # If user enters y
+         die1 = random.randint(1,6) #   Generate two random umbers
+         die2 = random.randint(1,6) #   Generate two random umbers
+         print(f'({die1}, {die2})') #   Print them
+    elif choice == 'n': # If user enters n
+        print('Thanks for playing!') #   Print thank you message 
+        break#   Terminate 
+else: # Else
+    print('Invalid choice!')#   Print invalid choice
